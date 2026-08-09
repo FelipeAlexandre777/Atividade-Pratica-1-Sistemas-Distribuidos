@@ -1,0 +1,137 @@
+=== CLIENTE ===
+
+============================================================
+CLIENTE - SISTEMAS DISTRIBUÍDOS
+============================================================
+Conectando em 127.0.0.1:5000...
+Conexão estabelecida.
+
+[1/5] Enviando em CSV...
+Conteúdo serializado:
+nome,cpf,idade,mensagem
+Fulano da Silva,10326709722,45,segue comprovante de endereço
+
+------------------------------------------------------------
+[2/5] Enviando em JSON...
+Conteúdo serializado:
+{
+  "nome": "Fulano da Silva",
+  "cpf": "10326709722",
+  "idade": 45,
+  "mensagem": "segue comprovante de endereço"
+}
+------------------------------------------------------------
+[3/5] Enviando em XML...
+Conteúdo serializado:
+<mensagem><nome>Fulano da Silva</nome><cpf>10326709722</cpf><idade>45</idade><mensagem>segue comprovante de endereço</mensagem></mensagem>
+------------------------------------------------------------
+[4/5] Enviando em YAML...
+Conteúdo serializado:
+nome: Fulano da Silva
+cpf: '10326709722'
+idade: 45
+mensagem: segue comprovante de endereço
+
+------------------------------------------------------------
+[5/5] Enviando em TOML...
+Conteúdo serializado:
+nome = "Fulano da Silva"
+cpf = "10326709722"
+idade = 45
+mensagem = "segue comprovante de endereço"
+
+------------------------------------------------------------
+As 5 mensagens foram enviadas com sucesso.
+Conexão encerrada.
+
+=== SERVIDOR ===
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+============================================================
+SERVIDOR - SISTEMAS DISTRIBUÍDOS
+============================================================
+Aguardando conexão na porta 5000...
+Cliente conectado: 127.0.0.1:58948
+
+============================================================
+[1/5] FORMATO RECEBIDO: CSV
+============================================================
+Nome      : Fulano da Silva
+CPF       : 10326709722
+Idade     : 45
+Mensagem  : segue comprovante de endereço
+
+Conteúdo recebido:
+nome,cpf,idade,mensagem
+Fulano da Silva,10326709722,45,segue comprovante de endereço
+
+
+============================================================
+[2/5] FORMATO RECEBIDO: JSON
+============================================================
+Nome      : Fulano da Silva
+CPF       : 10326709722
+Idade     : 45
+Mensagem  : segue comprovante de endereço
+
+Conteúdo recebido:
+{
+  "nome": "Fulano da Silva",
+  "cpf": "10326709722",
+  "idade": 45,
+  "mensagem": "segue comprovante de endereço"
+}
+
+============================================================
+[3/5] FORMATO RECEBIDO: XML
+============================================================
+Nome      : Fulano da Silva
+CPF       : 10326709722
+Idade     : 45
+Mensagem  : segue comprovante de endereço
+
+Conteúdo recebido:
+<mensagem><nome>Fulano da Silva</nome><cpf>10326709722</cpf><idade>45</idade><mensagem>segue comprovante de endereço</mensagem></mensagem>
+
+============================================================
+[4/5] FORMATO RECEBIDO: YAML
+============================================================
+Nome      : Fulano da Silva
+CPF       : 10326709722
+Idade     : 45
+Mensagem  : segue comprovante de endereço
+
+Conteúdo recebido:
+nome: Fulano da Silva
+cpf: '10326709722'
+idade: 45
+mensagem: segue comprovante de endereço
+
+
+============================================================
+[5/5] FORMATO RECEBIDO: TOML
+============================================================
+Nome      : Fulano da Silva
+CPF       : 10326709722
+Idade     : 45
+Mensagem  : segue comprovante de endereço
+
+Conteúdo recebido:
+nome = "Fulano da Silva"
+cpf = "10326709722"
+idade = 45
+mensagem = "segue comprovante de endereço"
+
+
+============================================================
+As 5 mensagens foram recebidas e processadas.
+============================================================
